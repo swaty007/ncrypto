@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_close_w</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="web" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="m0.01-login" transform="translate(-173.000000, -615.000000)" fill="#000000" fill-rule="nonzero">
+            <g id="ic_close_w" transform="translate(166.000000, 608.000000)">
+                <g id="Group" transform="translate(14.000000, 14.000000) rotate(45.000000) translate(-14.000000, -14.000000) translate(5.000000, 5.000000)">
+                    <path d="M8,8 L8,1 C8,0.44771525 8.44771525,8.8817842e-14 9,8.8817842e-14 C9.55228475,8.8817842e-14 10,0.44771525 10,1 L10,8 L17,8 C17.5522847,8 18,8.44771525 18,9 C18,9.55228475 17.5522847,10 17,10 L10,10 L10,17 C10,17.5522847 9.55228475,18 9,18 C8.44771525,18 8,17.5522847 8,17 L8,10 L1,10 C0.44771525,10 8.8817842e-14,9.55228475 8.8817842e-14,9 C8.8817842e-14,8.44771525 0.44771525,8 1,8 L8,8 Z" id="Combined-Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

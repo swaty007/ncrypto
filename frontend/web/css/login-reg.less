@@ -1,0 +1,124 @@
+.site-login, .site-register {
+  background: @color-2;
+  background-size: cover;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  min-height: 100vh;
+  position: relative;
+
+  input[type="email"],input[type="text"],input[type="password"],textarea,.form-control {
+    color: @color-1;
+    border: 1px solid fade(@color-1,30%);
+    &::placeholder {
+      color: fade(@color-1, 30%);
+    }
+    &:focus {
+      color: @color-2;
+    }
+  }
+
+  .logo-block {
+    margin-bottom: 60px;
+    text-align: center;
+    img {
+      max-height: 80px;
+    }
+  }
+  form {
+    padding: 20px;
+  }
+
+  .reset-pass {
+    font-family: @font-500;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 22px;
+    text-align: right;
+  }
+  .checkbox-block {
+    label {
+      color: @color-1;
+      font-family: @font-normal;
+      font-weight: normal;
+      font-size: 17px;
+      line-height: 20px;
+      cursor: pointer;
+      &:before {
+        content: url(../images/ic_checkbox0.svg);
+        display: block;
+        float: left;
+        height: 20px;
+        vertical-align: middle;
+        margin-right: 10px;
+      }
+    }
+    input {
+      &:checked {
+        &~label:before {
+          content: url(../images/ic_checkbox1.svg);
+        }
+      }
+      display: none;
+    }
+  }
+  label.control-label {
+    color: fade(@color-1, 60%);
+    font-size: 17px;
+  }
+  .recaptcha-block {
+    display: block;
+    margin-bottom: 20px;
+    text-align: center;
+    &>div {
+      margin: 0 auto;
+      display: inline-block;
+    }
+  }
+  .nav-login {
+    display: inline-block;
+     li.active{
+      a {
+        background: @color-gr;
+        color: @color-1;
+      }
+    }
+    a {
+      font-family: @font-500;
+      font-size: 24px;
+      font-weight: 500;
+      background: transparent;
+      color: fade(@color-1,60%);
+      line-height: 40px;
+      padding: 0 20px;
+      border: none;
+      &:hover {
+        background: @color-gr-hover;
+      }
+    }
+  }
+
+
+  select.form-control {
+    padding: 0 30px 0 10px;
+    width: 140px;
+    height: 30px;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    border-color: fade(@color-1,30%);
+    color: fade(@color-1,30%);
+  }
+  .lg-hr {
+    margin: 20px auto;
+    width: 100px;
+    border-top: 1px solid fade(@color-1,20%);
+  }
+  .footer-text {
+    color: fade(@color-1,60%);
+    font-family: @font-normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+  }
+}

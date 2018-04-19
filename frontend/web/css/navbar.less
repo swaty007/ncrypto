@@ -1,0 +1,128 @@
+.col-navbar-adaptive {
+  @media (min-width:992px) {
+    width: calc(~"100% - 98px");
+  }
+}
+.navbar-adaptive {
+  background-color: @color-2;
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.26);
+  min-height: 52px;
+
+  @media (max-width:991px) {
+    background-color: @color-2;
+    position: absolute;
+    bottom: 0;
+    z-index: 100;
+    width: 100%;
+    left: 0;
+    right: 0;
+    .navbar-collapse {
+      padding: 0;
+    }
+    .navbar-nav {
+      margin: 10px 0;
+      float: none!important;
+      li {
+        float: left;
+        width: 25%;
+        a {
+          font-size: 0!important;
+          line-height: 12px;
+          img {
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
+    }
+    .navbar-header {
+      display: none;
+    }
+
+  }
+  .navbar-brand {
+    float:right;
+    height: 68px;
+    padding: 14px 20px;
+    img {
+      height: 100%;
+    }
+  }
+  .navbar-collapse {
+    border-top: 0;
+    box-shadow: none;
+  }
+    @media (min-width:992px) {
+      padding-top: 100px;
+      padding-bottom: 130px;
+      width:98px;
+      padding-left: 10px;
+      padding-right: 10px;
+      .navbar-collapse {
+      padding-left: 5px;
+      padding-right: 5px;
+      }
+        .navbar-header {
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: block;
+          right: 0;
+          .navbar-brand {
+            height: 80px;
+            padding: 23px 0;
+            width: 100%;
+            text-align: center;
+            img {
+              height: 34px;
+              width: auto;
+              object-fit: contain;
+              margin-left:auto;
+              margin-right: auto;
+            }
+          }
+        }
+      ul {
+        width: 100%;
+        li {
+          float: none;
+          text-align: left;
+        }
+      }
+  }
+  ul {
+    li {
+      text-align: left;
+      a {
+        color: @color-1;
+        font-family: @font-normal;
+        font-size: 12px;
+        font-weight: normal;
+        line-height: 15px;
+        padding: 10px 0 10px 40px;
+        opacity: 0.6;
+        transition: 0.3s all;
+        white-space: nowrap;
+        &:hover,&:focus,&.active {
+          background-color: transparent;
+          opacity: 1;
+        }
+        img {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+        }
+        @media (min-width:992px) {
+          padding: 10px 0;
+            text-align: center;
+            img {
+              position: static;
+              display: block;
+              margin-left: auto;
+              margin-right: auto;
+              margin-bottom: 5px;
+            }
+        }
+      }
+    }
+  }
+}

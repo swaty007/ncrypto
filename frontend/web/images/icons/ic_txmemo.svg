@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_txmemo</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="web" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="m1.01-transaction-preview" transform="translate(-123.000000, -647.000000)" fill="#000000">
+            <g id="ic_txmemo" transform="translate(118.000000, 642.000000)">
+                <path d="M9,6.5 C7.61928813,6.5 6.5,7.61928813 6.5,9 L6.5,19 C6.5,20.3807119 7.61928813,21.5 9,21.5 L19,21.5 C20.3807119,21.5 21.5,20.3807119 21.5,19 L21.5,9 C21.5,7.61928813 20.3807119,6.5 19,6.5 L9,6.5 Z M9,5 L19,5 C21.209139,5 23,6.790861 23,9 L23,19 C23,21.209139 21.209139,23 19,23 L9,23 C6.790861,23 5,21.209139 5,19 L5,9 C5,6.790861 6.790861,5 9,5 Z" id="Rectangle-12" fill-rule="nonzero"></path>
+                <rect id="Rectangle-14" x="9" y="9" width="10" height="2" rx="1"></rect>
+                <rect id="Rectangle-14" x="9" y="13" width="10" height="2" rx="1"></rect>
+                <rect id="Rectangle-14" x="9" y="17" width="6" height="2" rx="1"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

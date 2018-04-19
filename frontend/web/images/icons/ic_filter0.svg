@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_filter0</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="web" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1.02-transactions-list" transform="translate(-1353.000000, -210.000000)" fill="#000000">
+            <g id="ic_filter0" transform="translate(1352.000000, 209.000000)">
+                <path d="M14,25.5 C20.3512746,25.5 25.5,20.3512746 25.5,14 C25.5,7.64872538 20.3512746,2.5 14,2.5 C7.64872538,2.5 2.5,7.64872538 2.5,14 C2.5,20.3512746 7.64872538,25.5 14,25.5 Z M14,27 C6.82029825,27 1,21.1797017 1,14 C1,6.82029825 6.82029825,1 14,1 C21.1797017,1 27,6.82029825 27,14 C27,21.1797017 21.1797017,27 14,27 Z" id="Oval-9" fill-rule="nonzero"></path>
+                <rect id="Rectangle-23" x="6" y="9" width="16" height="2" rx="1"></rect>
+                <rect id="Rectangle-23" x="8" y="13" width="12" height="2" rx="1"></rect>
+                <rect id="Rectangle-23" x="10" y="17" width="8" height="2" rx="1"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

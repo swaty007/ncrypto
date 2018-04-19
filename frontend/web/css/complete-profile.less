@@ -1,0 +1,43 @@
+.complete-profile {
+  .title {
+    color: @color-2;
+    font-family: @font-bold;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 26px;
+    margin-bottom: 20px;
+  }
+  form {
+    background-color: @color-1;
+    padding: 20px 20px 40px;
+    border-radius: 7px;
+    @media (max-width:991px) {
+      margin-left: -20px;
+      margin-right: -20px;
+    }
+  }
+
+  .form-copy-text {
+    color: #4A4A4A;
+    word-wrap: break-word;
+    &:before {
+      opacity: 0.3;
+    }
+  }
+  .Fa2-link {
+    background-image: url(../images/icons/ic_2fa_lock.svg);
+    background-repeat: no-repeat;
+    background-size: auto 24px;
+    background-position: 0 50%;
+    padding-left: 36px;
+    color: @color-2;
+    font-family: @font-500;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 28px;
+    display: inline-block;
+    margin-bottom: 40px;
+    outline: none;
+    text-decoration: none;
+  }
+}

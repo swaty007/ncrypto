@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <rect id="ic_checkbox0-a" width="20" height="20" x="540" y="449" rx="3"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd" transform="translate(-540 -449)">
+    <use fill="#FFF" xlink:href="#ic_checkbox0-a"/>
+    <rect width="19" height="19" x="540.5" y="449.5" stroke="#CFCFCF" rx="3"/>
+  </g>
+</svg>
