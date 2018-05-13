@@ -81,6 +81,14 @@ class SiteController extends Controller
     {
         return $this->render('wallet');
     }
+    public function actionCreateWallet()
+    {
+        if (Yii::$app->request->isAjax) {
+            \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+            sleep(4);
+            return ['params'=>['wallet'=>'GCCVPYFOHY7ZB7557JKENAX62LUAPLMGIWNZJAFV2MITK6T32V37KEJU','img_src'=>"/images/address.png"]];
+        }
+    }
 
     public function actionLogin()
     {

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50 (54983) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_txstat_failed</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="web" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1.05-transaction-complete" transform="translate(-695.000000, -204.000000)">
+            <g id="ic_txstat_failed" transform="translate(697.000000, 206.000000)">
+                <circle id="Oval-7" stroke="#F6455B" stroke-width="4" cx="23" cy="23" r="23"></circle>
+                <polygon id="Path-6" fill="#F6455B" fill-rule="nonzero" transform="translate(23.000000, 23.000000) rotate(45.000000) translate(-23.000000, -23.000000) " points="8 25 8 21 38 21 38 25"></polygon>
+                <polygon id="Path-6" fill="#F6455B" fill-rule="nonzero" transform="translate(23.000000, 23.000000) rotate(45.000000) translate(-23.000000, -23.000000) " points="25 38 21 38 21 8 25 8"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

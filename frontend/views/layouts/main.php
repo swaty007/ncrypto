@@ -26,7 +26,6 @@ AppAsset::register($this);
 <body>
 <?php $this->beginBody() ?>
 
-
 <div class="container-fluid">
     <div class="row row-eq-height">
 
@@ -59,6 +58,14 @@ AppAsset::register($this);
                 </ul>
             </div>
 
+            <div class="navbar-footer text-center">
+                <ul id="w1" class="navbar-nav nav text-center">
+                    <li>
+                        <a href="<?= Url::to(['/site/logout']); ?>" class="exit-btn"><?= Html::img('@web/images/icons/ic_exit.svg',['style'=>'transform:translateX(4px)']) ;?>Exit</a>
+                    </li>
+                </ul>
+            </div>
+
         </div>
 
         <div class="col-sm-12 col-navbar-adaptive">
@@ -82,14 +89,12 @@ AppAsset::register($this);
 
                         <?php   if (Yii::$app->user->isGuest) :?>
                             <div class="status-block ">
-                                <div class="img-block"></div>
-                                <p class="title">Konstantin
-                                    Konstantinopolskyy</p>
+                                <div class="img-block"><?= Html::img('@web/images/icons/ic_useravatar.svg') ;?></div>
                             </div>
                         <? else :?>
                             <div class="status-block logged">
-                                <div class="img-block"><?= Html::img('@web/images/icon/ic_tokenslae.svg') ;?></div>
-                                <p class="title">Konstantin<br>
+                                <div class="img-block"><?= Html::img('@web/images/icons/ic_useravatar.svg') ;?></div>
+                                <p class="title">Konstantin
                                     Konstantinopolskyy</p>
                             </div>
                         <? endif;?>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="51px" height="50px" viewBox="0 0 51 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50 (54983) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_txstat_ok</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="-11.4239583%" y1="-14.2961722%" x2="116.925%" y2="106.674007%" id="linearGradient-1">
+            <stop stop-color="#CCEF05" offset="0%"></stop>
+            <stop stop-color="#429321" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="web" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1.04-transaction-complete" transform="translate(-695.000000, -204.000000)" fill="url(#linearGradient-1)" fill-rule="nonzero">
+            <g id="ic_txstat_ok" transform="translate(695.000000, 204.000000)">
+                <path d="M40.2008178,5.1507209 L37.7666781,8.32482927 C34.1290508,5.53522911 29.683835,4 25,4 C13.4020203,4 4,13.4020203 4,25 C4,36.5979797 13.4020203,46 25,46 C36.5979797,46 46,36.5979797 46,25 C46,23.1264613 45.7551356,21.2872512 45.2768737,19.514618 L49.1387814,18.4726634 C49.7084972,20.5842622 50,22.7737797 50,25 C50,38.8071187 38.8071187,50 25,50 C11.1928813,50 0,38.8071187 0,25 C0,11.1928813 11.1928813,0 25,0 C30.5717427,0 35.8707352,1.83009509 40.2008178,5.1507209 Z M47.232233,5.23223305 L50.767767,8.76776695 L24.1411865,35.3943475 L9.3851444,22.9084657 L12.6148556,19.0915343 L23.8588135,28.6056525 L47.232233,5.23223305 Z" id="Combined-Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

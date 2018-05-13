@@ -15,17 +15,44 @@ $this->title = 'Transactions';
 
                 <div class="row">
                     <div class="col-md-4">
-                        <select class="form-control main-select">
-                            <option data-imagesrc="/images/address.png">English</option>
-                            <option data-imagesrc="/images/address.png">213</option>
-                            <option data-imagesrc="/images/address.png">55</option>
-                            <option data-imagesrc="/images/address.png">777</option>
-                        </select>
+
+                        <div id="history-select" class="dd-container">
+                            <div class="dd-select">
+                                <input class="dd-selected-value" type="hidden" value="English">
+                                <a class="dd-selected">
+                                    <?= Html::img('@web/images/address.png',['class'=>'dd-selected-image']);?>
+                                    <label class="dd-selected-text">English</label>
+                                </a>
+                            </div>
+                            <ul class="dd-options">
+                                <li><a class="dd-option dd-option-selected">
+                                        <input class="dd-option-value" type="hidden" value="English">
+                                        <?= Html::img('@web/images/address.png',['class'=>'dd-option-image']);?>
+                                        <label class="dd-option-text">English</label></a></li>
+                                <li><a class="dd-option">
+                                        <input class="dd-option-value" type="hidden" value="213">
+                                        <?= Html::img('@web/images/address.png',['class'=>'dd-option-image']);?>
+                                        <label class="dd-option-text">213</label></a></li>
+                                <li><a class="dd-option">
+                                        <input class="dd-option-value" type="hidden" value="55">
+                                        <?= Html::img('@web/images/address.png',['class'=>'dd-option-image']);?>
+                                        <label class="dd-option-text">55</label></a></li>
+                                <li><a class="dd-option">
+                                        <input class="dd-option-value" type="hidden" value="777">
+                                        <?= Html::img('@web/images/address.png',['class'=>'dd-option-image']);?>
+                                        <label class="dd-option-text">777</label></a></li>
+                                <li><a href="#" onclick="Wallet_create.init()" class="dd-create">
+                                        <?= Html::img('@web/images/icons/ic_addplus.svg',['class'=>'dd-option-image']);?>
+                                        <label class="dd-option-text">Create Wallet</label></a></li>
+                            </ul>
+                        </div>
+
                         <script>
-                            document.addEventListener('DOMContentLoaded',function () {
-                                $('select.main-select').ddslick();
+                            document.addEventListener('DOMContentLoaded', function () {
+                                dd_slick_init("#history-select");
                             });
                         </script>
+
                     </div>
                 </div>
                 
@@ -174,15 +201,12 @@ $this->title = 'Transactions';
                     </div>
                 </div>
 
-                <div class="dataTables_paginate paging_simple_numbers" id="data_table_paginate">
-                    <span>
-                        <a class="paginate_button current">1</a>
-                        <a class="paginate_button" aria-controls="data_table" data-dt-idx="2" tabindex="0">2</a>
-                        <a class="paginate_button" aria-controls="data_table" data-dt-idx="3" tabindex="0">3</a>
-                        <a class="paginate_button" aria-controls="data_table" data-dt-idx="4" tabindex="0">4</a>
-                        <a class="paginate_button" aria-controls="data_table" data-dt-idx="5" tabindex="0">5</a>
-                        <a class="paginate_button" aria-controls="data_table">30</a>
-                    </span>
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-lg-12 text-center">
+                            <button type="submit" class="grey-btn">Preview Payment</button>
+                        </div>
+                    </div>
                 </div>
 
             </div>

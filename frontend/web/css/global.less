@@ -1,4 +1,8 @@
 @import "_ddslick";
+body {
+  font-variant-ligatures: unset !important;
+  font-variant: none !important;
+}
 input[type="email"],input[type="text"],input[type="password"],textarea,.form-control {
   border: 1px solid #D5D5D5;
   border-radius: 4px;
@@ -87,6 +91,7 @@ select.form-control {
   cursor: pointer;
   position: relative;
   text-overflow: ellipsis;
+  min-height: 40px;
   &:before {
     content: '';
     background-color: transparent;
@@ -109,6 +114,8 @@ select.form-control {
   @media(max-width:991px) {
     margin-left: -20px;
     margin-right: -20px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
   }
 }
 .right-margin {
@@ -268,8 +275,8 @@ p {
   background: @color-gr;
   padding: 20px 20px 52px;
   overflow: hidden;
+  min-height: 100vh;
   @media (min-width:992px)  {
-    min-height: 100vh;
     padding: 20px 40px 150px;
   }
   &.grey {
@@ -300,17 +307,31 @@ p {
   }
 }
 
+.bg-canvas {
+  canvas {
+    background-color: @color-2;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+}
+
 .info-block {
   margin-bottom: 20px;
+  overflow-x: auto;
   .info-menu {
-    overflow-x: auto;
     max-width: 515px;
     display: inline-block;
     float:left;
     .info-nav {
       li {
         display: table-cell;
-        width: 1%;
+        width: auto;
         background-color: transparent;
         &.active {
           a {
@@ -323,7 +344,7 @@ p {
           font-size: 22px;
           font-weight: bold;
           line-height: 40px;
-          padding: 0;
+          padding: 0 40px 0 0;
           background-color: transparent;
           white-space: nowrap;
           &:hover {
@@ -345,34 +366,21 @@ p {
     float: right;
     .img-block {
       float: right;
-      background-color: @color-2;
-      padding: 6px;
+      background-color: transparent;
+      padding: 0;
       border-radius: 50px;
       text-align: center;
       display: block;
       overflow: hidden;
-      &:before {
-        content: "";
-        display: block;
-        width: 28px;
-        height: 28px;
-        background-size: 20px auto;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-image: url(../images/ic_kyc.svg);
-      }
       img {
-        width: 40px;
-        height: 40px;
+        width: 36px;
+        height: 36px;
         object-fit: cover;
       }
     }
     &.logged {
       .img-block {
-        &:before {
-          content: "";
-          display: none;
-        }
+
       }
     }
     .title {
@@ -380,7 +388,7 @@ p {
       font-family: @font-500;
       font-size: 17px;
       font-weight: 500;
-      line-height: 40px;
+      line-height: 36px;
       white-space: nowrap;
       margin-right: 15px;
       float:right;
@@ -452,7 +460,7 @@ p {
         border: 0;
         .close {
           &:before {
-            content: url("../images/icons/ic_close_gy.svg");
+            content: url("../images/icons/ic_close_w.svg");
           }
           span {
             display: none;
@@ -475,12 +483,34 @@ p {
           line-height: 20px;
           text-align: center;
         }
+        .pre-load-bar {
+         margin: 40px auto 20px auto;
+        }
+        .status_text {
+          color: #4A4A4A;
+          font-family: @font-500;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 20px;
+          text-align: center;
+          margin-bottom: 30px;
+          &.fail {
+            color: @color-red;
+          }
+        }
       }
       .modal-body {
         padding: 20px;
         .control-label {
           span {
             color: #616161;
+          }
+          &.label_status {
+            color: #9B9B9B;
+            font-size: 14px;
+            font-family: @font-500;
+            font-weight: 500;
+            line-height: 16px;
           }
         }
         .currency-text {
@@ -519,7 +549,88 @@ p {
         .tooltip-btn {
           margin-bottom: 40px;
         }
+        .control-status_text {
+          &.time {
+            font-weight: 500;
+            font-family: @font-500;
+          }
+          color: #4A4A4A;
+          font-family: @font-normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 16px;
+          word-wrap: break-word;
+        }
       }
+      .avatar-block {
+        margin-top: 40px;
+        .control-label {
+          color: #9B9B9B;
+        }
+        .avatar-img {
+          img {
+            height: 56px;
+            width: 56px;
+            object-fit: cover;
+            margin-bottom: 16px;
+            border-radius: 50px;
+          }
+        }
+      }
+    }
+  }
+}
+.alert-info {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  border-radius: 7px;
+  background-color: fade(@color-2,90%);
+  padding: 20px;
+  max-width: 100%;
+  width: 340px;
+  .alert-info-img {
+    display: inline-block;
+    vertical-align: middle;
+    height: 44px;
+    width: 44px;
+    position: relative;
+    &:before {
+      content: '';
+      background-color: transparent;
+      background-image: url(../images/icons/ic_alert_big.svg);
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      width: 44px;
+      height: 44px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      left: 0;
+      bottom: 0;
+    }
+  }
+  .alert-info-content {
+    margin-left: 20px;
+    display: inline-block;
+    width: calc(~"99% - 45px - 20px");
+    vertical-align: middle;
+    .alert-info-title {
+      color: #4A4A4A;
+      font-family: @font-500;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 16px;
+      margin-bottom: 4px;
+    }
+    .alert-info-text {
+      color: @color-1;
+      font-family: @font-bold;
+      font-size: 17px;
+      font-weight: bold;
+      line-height: 20px;
     }
   }
 }

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50 (54983) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_stat_out</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="web" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1.02-transactions-list" transform="translate(-171.000000, -414.000000)">
+            <g id="ic_stat_out" transform="translate(182.000000, 425.000000) scale(-1, 1) translate(-182.000000, -425.000000) translate(171.000000, 414.000000)">
+                <path d="M11,22 C4.92486775,22 0,17.0751322 0,11 C0,4.92486775 4.92486775,0 11,0 C17.0751322,0 22,4.92486775 22,11 C22,17.0751322 17.0751322,22 11,22 Z" id="Oval-7" fill="#FFFFFF" fill-rule="nonzero"></path>
+                <path d="M11,21 C16.5228475,21 21,16.5228475 21,11 C21,5.4771525 16.5228475,1 11,1 C5.4771525,1 1,5.4771525 1,11 C1,16.5228475 5.4771525,21 11,21 Z" id="Path" fill="#000000" transform="translate(11.000000, 11.000000) rotate(90.000000) translate(-11.000000, -11.000000) "></path>
+                <path d="M11.75,16 C11.75,16.4142136 11.4142136,16.75 11,16.75 C10.5857864,16.75 10.25,16.4142136 10.25,16 L10.25,6 C10.25,5.58578644 10.5857864,5.25 11,5.25 C11.4142136,5.25 11.75,5.58578644 11.75,6 L11.75,16 Z" id="Path-6" fill="#FFFFFF" fill-rule="nonzero" transform="translate(11.000000, 11.000000) rotate(90.000000) translate(-11.000000, -11.000000) "></path>
+                <path d="M4.53033009,13.5303301 C4.23743687,13.8232233 3.76256313,13.8232233 3.46966991,13.5303301 C3.1767767,13.2374369 3.1767767,12.7625631 3.46966991,12.4696699 L7.46966991,8.46966991 C7.76256313,8.1767767 8.23743687,8.1767767 8.53033009,8.46966991 L12.5303301,12.4696699 C12.8232233,12.7625631 12.8232233,13.2374369 12.5303301,13.5303301 C12.2374369,13.8232233 11.7625631,13.8232233 11.4696699,13.5303301 L8,10.0606602 L4.53033009,13.5303301 Z" id="Path-7" fill="#FFFFFF" fill-rule="nonzero" transform="translate(8.000000, 11.000000) scale(1, -1) rotate(-90.000000) translate(-8.000000, -11.000000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -12,6 +12,10 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <script>
     document.getElementById('content-wrap').classList.add("grey");
+    document.getElementById('content-wrap').classList.add("ajax-loader");
+   setTimeout(function () {
+       document.getElementById('content-wrap').classList.remove("ajax-loader");// скрыть прелоадер
+   },4000);
 </script>
 <section id="complete-profile" class="complete-profile">
         <div class="row">

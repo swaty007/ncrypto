@@ -19,7 +19,6 @@ class AppAsset extends AssetBundle
         'js/less.min.js',
         'js/main.js',
         'js/jquery.datetimepicker.min.js',
-        'js/jquery.ddslick.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',

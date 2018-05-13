@@ -34,10 +34,12 @@
         }
       }
     }
+    .navbar-footer {
+      display: none;
+    }
     .navbar-header {
       display: none;
     }
-
   }
   .navbar-brand {
     float:right;
@@ -106,6 +108,9 @@
           background-color: transparent;
           opacity: 1;
         }
+        &.exit-btn {
+          text-indent: -5px;
+        }
         img {
           position: absolute;
           left: 50%;
@@ -120,9 +125,17 @@
               margin-left: auto;
               margin-right: auto;
               margin-bottom: 5px;
+              min-height: 25px;
+              max-width: 30px;
             }
         }
       }
     }
+  }
+  .navbar-footer {
+    position: absolute;
+    bottom: 40px;
+    left: 15px;
+    right: 15px;
   }
 }

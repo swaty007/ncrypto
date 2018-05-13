@@ -7,13 +7,13 @@ use yii\helpers\Url;
 $this->title = 'Wallet';
 ?>
 
-
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
 
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
                 <h4 class="modal-title">You are about to send money</h4>
                 <p class="modal-sub-title">Please chech carrefully information give below</p>
             </div>
@@ -22,21 +22,49 @@ $this->title = 'Wallet';
                 <form>
                     <div class="form-group">
                         <label class="control-label">From:</label>
-                        <select id="sel-1" class="form-control main-select">
-                            <option data-imagesrc="/images/address.png">English</option>
-                            <option data-imagesrc="/images/address.png">213</option>
-                            <option data-imagesrc="/images/address.png">55</option>
-                            <option data-imagesrc="/images/address.png">777</option>
-                        </select>
+
+                        <div id="sel-1" class="dd-container">
+                            <div class="dd-select">
+                                <input class="dd-selected-value" type="hidden" value="1">
+                                <a class="dd-selected">
+                                    <?= Html::img('@web/images/address.png',['class'=>'dd-selected-image']);?>
+                                    <label class="dd-selected-text">English</label>
+                                </a>
+                            </div>
+                            <ul class="dd-options">
+                                <li><a class="dd-option dd-option-selected">
+                                        <input class="dd-option-value" type="hidden" value="1">
+                                        <?= Html::img('@web/images/address.png',['class'=>'dd-option-image']);?>
+                                        <label class="dd-option-text">English</label></a></li>
+                                <li><a class="dd-option">
+                                        <input class="dd-option-value" type="hidden" value="2">
+                                        <?= Html::img('@web/images/address.png',['class'=>'dd-option-image']);?>
+                                        <label class="dd-option-text">213</label></a></li>
+                                <li><a class="dd-option">
+                                        <input class="dd-option-value" type="hidden" value="3">
+                                        <?= Html::img('@web/images/address.png',['class'=>'dd-option-image']);?>
+                                        <label class="dd-option-text">55</label></a></li>
+                                <li><a class="dd-option">
+                                        <input class="dd-option-value" type="hidden" value="4">
+                                         <?= Html::img('@web/images/address.png',['class'=>'dd-option-image']);?>
+                                        <label class="dd-option-text">777</label></a></li>
+                                <li><a onclick="Wallet_create.init()" class="dd-create">
+                                        <?= Html::img('@web/images/icons/ic_addplus.svg',['class'=>'dd-option-image']);?>
+                                        <label class="dd-option-text">Create Wallet</label></a></li>
+                            </ul>
+                        </div>
+
                         <script>
-                            document.addEventListener('DOMContentLoaded',function () {
-                                $('select#sel-1.main-select').ddslick();
+                            document.addEventListener('DOMContentLoaded', function () {
+                                dd_slick_init("#sel-1");
                             });
                         </script>
+
                     </div>
                     <div class="form-group">
                         <label class="control-label">To:</label>
-                        <p class="form-copy-text" onclick="copyText(this);" data-original-title="" title="">GA6HCMBLTZS5VYYBCATRBRZ3BZJMAFUDKYYF6AH6MVCMGWMRDNSWJPIH</p>
+                        <p class="form-copy-text" onclick="copyText(this);" data-original-title="" title="">
+                            GA6HCMBLTZS5VYYBCATRBRZ3BZJMAFUDKYYF6AH6MVCMGWMRDNSWJPIH</p>
                     </div>
                     <div class="form-group like-group">
                         <label class="control-label"><span>Balance</span></label>
@@ -58,17 +86,35 @@ $this->title = 'Wallet';
                             Add Memo</span>
                     </div>
                     <div class="text-center">
-                        <button type="submit" class="grey-btn">Sent Payment</button>
+                        <button onclick="ModalLoader.init('#exampleModal',{
+                            timestamp: '2018-04-04, 07:01:46',
+                            from: 'GA6HCMBLTZS5VYYBCATRBRZ3BZJMAFUDKYYF6AH6MVCMGWMRDNSWJPIH',
+                            to: 'GA6HCMBLTZS5VYYBCATRBRZ3BZJMAFUDKYYF6AH6MVCMGWMRDNSWJPIH',
+                            amount: '200',
+                            currency: 'NCR',
+                            fee: '0.0000002'
+                            })" class="grey-btn">Sent Payment
+                        </button>
                     </div>
 
                 </form>
             </div>
 
+            <button onclick="ModalLoader.status('#exampleModal','Complete','http://ncrypto.infinitum.tech/site/wallet?more_info')"
+                    class="grey-btn">Sent Complete
+            </button>
+            <a onclick="ModalLoader.status('#exampleModal','Fail','http://ncrypto.infinitum.tech/site/wallet?more_info')"
+                    class="grey-btn">Sent Fail
+            </a>
+
         </div>
     </div>
 </div>
+
+
+
 <script>
-    document.addEventListener('DOMContentLoaded',function () {
+    document.addEventListener('DOMContentLoaded', function () {
 
         $('#exampleModal').on('show.bs.modal', function (event) {
             var button = $(event.relatedTarget) // Button that triggered the modal
@@ -82,8 +128,9 @@ $this->title = 'Wallet';
     });
 
 </script>
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">Open modal for @fat</button>
-
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">Open
+    modal
+</button>
 
 
 <section id="wallet-page" class="wallet-page">
@@ -91,24 +138,50 @@ $this->title = 'Wallet';
     <div class="row">
         <div class="col-md-4">
             <div class="form-group right-margin">
-            <select id="sel-modal" class="form-control main-select">
-                <option data-imagesrc="/images/address.png">English</option>
-                <option data-imagesrc="/images/address.png">213</option>
-                <option data-imagesrc="/images/address.png">55</option>
-                <option data-imagesrc="/images/address.png">777</option>
-            </select>
-            <script>
-                document.addEventListener('DOMContentLoaded',function () {
-                    $('select#sel-modal.main-select').ddslick();
-                });
-            </script>
+
+                <div id="sel-modal-1" class="dd-container">
+                    <div class="dd-select">
+                        <input class="dd-selected-value" type="hidden" value="English">
+                        <a class="dd-selected">
+                            <?= Html::img('@web/images/address.png',['class'=>'dd-selected-image']);?>
+                            <label class="dd-selected-text">English</label>
+                        </a>
+                    </div>
+                    <ul class="dd-options">
+                        <li><a class="dd-option dd-option-selected">
+                                <input class="dd-option-value" type="hidden" value="English">
+                                <?= Html::img('@web/images/address.png',['class'=>'dd-option-image']);?>
+                                <label class="dd-option-text">English</label></a></li>
+                        <li><a class="dd-option">
+                                <input class="dd-option-value" type="hidden" value="213">
+                                <?= Html::img('@web/images/address.png',['class'=>'dd-option-image']);?>
+                                <label class="dd-option-text">213</label></a></li>
+                        <li><a class="dd-option">
+                                <input class="dd-option-value" type="hidden" value="55">
+                                <?= Html::img('@web/images/address.png',['class'=>'dd-option-image']);?>
+                                <label class="dd-option-text">55</label></a></li>
+                        <li><a class="dd-option">
+                                <input class="dd-option-value" type="hidden" value="777">
+                                <?= Html::img('@web/images/address.png',['class'=>'dd-option-image']);?>
+                                <label class="dd-option-text">777</label></a></li>
+                        <li><a onclick="Wallet_create.init()" class="dd-create">
+                                <?= Html::img('@web/images/icons/ic_addplus.svg',['class'=>'dd-option-image']);?>
+                                <label class="dd-option-text">Create Wallet</label></a></li>
+                    </ul>
+                </div>
+
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        dd_slick_init("#sel-modal-1");
+                    });
+                </script>
             </div>
         </div>
         <div class="col-md-8">
             <div class="form-group right-left">
-            <a href="#" class="btn-white-wallet left-margin">
-                Create Wallet
-            </a>
+                <a onclick="Wallet_create.init()" class="btn-white-wallet left-margin">
+                    Create Wallet
+                </a>
             </div>
         </div>
     </div>
@@ -123,10 +196,11 @@ $this->title = 'Wallet';
                 </p>
             </div>
         </div>
-        <div class="col-md-6">
-            <div class="form-group left-margin">
+        <div class="col-md-8">
+            <div class="form-group left-margin form-group-copy">
                 <label class="control-label"><span class="white">Wallet Address</span></label>
-                <p class="form-copy-text" onclick="copyText(this);">GCCVPYFOHY7ZB7557JKENAX62LUAPLMGIWNZJAFV2MITK6T32V37KEJU</p>
+                <p class="form-copy-text" onclick="copyText(this);">
+                    GCCVPYFOHY7ZB7557JKENAX62LUAPLMGIWNZJAFV2MITK6T32V37KEJU</p>
             </div>
         </div>
     </div>

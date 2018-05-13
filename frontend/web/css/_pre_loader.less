@@ -1,0 +1,115 @@
+//ajax loader
+.ajax-loader {
+  &:not(.loaded) {
+    &.modal {
+      .modal-dialog .modal-content .avatar-block .avatar-img img {
+        width: 50px !important;
+        height: 50px !important;
+        display: block !important;
+        background: #EDEDF0 !important;
+      }
+      .modal-dialog .control-label {
+        color: #EDEDF0 !important;
+        background: #EDEDF0 !important;
+         border-radius: 4px;
+      }
+      .modal-dialog .modal-content .form-copy-text {
+        &:before {
+          opacity: 0;
+        }
+        background: #EDEDF0 !important;
+        color: #EDEDF0 !important;
+         border-radius: 4px;
+      }
+    }
+    &.content-wrap.grey {
+      .form-header {
+        background: #EDEDF0 !important;
+        color: #EDEDF0 !important;
+        border-radius: 4px;
+      }
+      label.control-label {
+        background: #EDEDF0 !important;
+        color: #EDEDF0 !important;
+        border-radius: 4px;
+      }
+      .complete-profile .Fa2-link {
+        background: #EDEDF0 !important;
+        color: #EDEDF0 !important;
+        border-radius: 4px;
+      }
+      .complete-profile .form-copy-text {
+        background: #EDEDF0 !important;
+        color: #EDEDF0 !important;
+        border-radius: 4px;
+        &:before {
+          opacity: 0;
+        }
+      }
+    }
+    .form-control {
+      background: #EDEDF0 !important;
+      color: #EDEDF0 !important;
+      border-radius: 4px;
+      border-color: #EDEDF0;
+      &::placeholder {
+        color: #EDEDF0 !important;
+      }
+    }
+    .grey-btn {
+      background: #EDEDF0 !important;
+      color: #EDEDF0 !important;
+    }
+  }
+}
+
+//ajax loader end
+
+.pre-load-bar {
+  height: 50px;
+  width: 50px;
+  background: transparent;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #643cbc;
+  border-right-color: #643cbc;
+  animation: spin 0.9s linear infinite;
+  &.completed {
+    animation: none;
+    background-image: url("../images/icons/ic_txstat_ok.svg");
+    background-size: 50px;
+    background-position: 50% 50%;
+    border-top-color: transparent;
+    border-right-color: transparent;
+  }
+  &.fail {
+    animation: none;
+    background-image: url("../images/icons/ic_txstat_failed.svg");
+    background-size: 50px;
+    background-position: 50% 50%;
+    border-top-color: transparent;
+    border-right-color: transparent;
+  }
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+  }
+  to {
+    -webkit-transform: rotate(1turn);
+    transform: rotate(1turn)
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+  }
+  to {
+    -webkit-transform: rotate(1turn);
+    transform: rotate(1turn)
+  }
+}
