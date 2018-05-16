@@ -105,6 +105,28 @@ select.form-control {
     top:0;
     bottom: 0;
   }
+  .img-copy {
+    height: 36px;
+    width: 36px;
+    object-fit: cover;
+    float: left;
+    border-radius: 50px;
+    vertical-align: middle;
+    margin-right: 10.5px;
+  }
+  &.has-error {
+    background-color: @color-red;
+    color: @color-1;
+  }
+}
+.error-text {
+  color: @color-red;
+  text-align: right;
+  line-height: 16px;
+  font-size: 14px;
+  font-family: @font-normal;
+  font-weight: normal;
+  margin-top: 4px;
 }
 
 .white-block-wrap {

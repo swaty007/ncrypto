@@ -28,19 +28,19 @@ $this->title = 'Transactions';
                                 <li><a class="dd-option dd-option-selected">
                                         <input class="dd-option-value" type="hidden" value="English">
                                         <?= Html::img('@web/images/address.png',['class'=>'dd-option-image']);?>
-                                        <label class="dd-option-text">English</label></a></li>
+                                        <label class="dd-option-text">Default wallet</label></a></li>
                                 <li><a class="dd-option">
                                         <input class="dd-option-value" type="hidden" value="213">
                                         <?= Html::img('@web/images/address.png',['class'=>'dd-option-image']);?>
-                                        <label class="dd-option-text">213</label></a></li>
+                                        <label class="dd-option-text">Default wallet</label></a></li>
                                 <li><a class="dd-option">
                                         <input class="dd-option-value" type="hidden" value="55">
                                         <?= Html::img('@web/images/address.png',['class'=>'dd-option-image']);?>
-                                        <label class="dd-option-text">55</label></a></li>
+                                        <label class="dd-option-text">Default wallet</label></a></li>
                                 <li><a class="dd-option">
                                         <input class="dd-option-value" type="hidden" value="777">
                                         <?= Html::img('@web/images/address.png',['class'=>'dd-option-image']);?>
-                                        <label class="dd-option-text">777</label></a></li>
+                                        <label class="dd-option-text">Default wallet</label></a></li>
                                 <li><a href="#" onclick="Wallet_create.init()" class="dd-create">
                                         <?= Html::img('@web/images/icons/ic_addplus.svg',['class'=>'dd-option-image']);?>
                                         <label class="dd-option-text">Create Wallet</label></a></li>

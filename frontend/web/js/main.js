@@ -140,7 +140,6 @@ var Wallet_create = {
                     <div class="text-center">
                         <button id="button_create_wallet" class="grey-btn">Create</button>
                     </div>
-
                
             </div>
         </div>

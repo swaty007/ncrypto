@@ -12,8 +12,7 @@ $this->title = 'Wallet';
         <div class="modal-content">
 
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
-                </button>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title">You are about to send money</h4>
                 <p class="modal-sub-title">Please chech carrefully information give below</p>
             </div>
@@ -24,34 +23,38 @@ $this->title = 'Wallet';
                         <label class="control-label">From:</label>
 
                         <div id="sel-1" class="dd-container">
-                            <div class="dd-select">
+                            <div class="dd-select with-address">
                                 <input class="dd-selected-value" type="hidden" value="1">
-                                <a class="dd-selected">
+                                <a class="dd-selected has-error">
                                     <?= Html::img('@web/images/address.png',['class'=>'dd-selected-image']);?>
-                                    <label class="dd-selected-text">English</label>
+                                    <label class="dd-selected-text">Default wallet</label>
+                                    <p class="wallet-address">GCCVPYFOHY7ZB7557JKENAX62LUAPLMGIWNZJAFV2MITK6T32V37KEJU</p>
                                 </a>
                             </div>
                             <ul class="dd-options">
                                 <li><a class="dd-option dd-option-selected">
                                         <input class="dd-option-value" type="hidden" value="1">
                                         <?= Html::img('@web/images/address.png',['class'=>'dd-option-image']);?>
-                                        <label class="dd-option-text">English</label></a></li>
+                                        <label class="dd-option-text">Default wallet</label></a></li>
                                 <li><a class="dd-option">
                                         <input class="dd-option-value" type="hidden" value="2">
                                         <?= Html::img('@web/images/address.png',['class'=>'dd-option-image']);?>
-                                        <label class="dd-option-text">213</label></a></li>
+                                        <label class="dd-option-text">Default wallet</label></a></li>
                                 <li><a class="dd-option">
                                         <input class="dd-option-value" type="hidden" value="3">
                                         <?= Html::img('@web/images/address.png',['class'=>'dd-option-image']);?>
-                                        <label class="dd-option-text">55</label></a></li>
+                                        <label class="dd-option-text">Default wallet</label></a></li>
                                 <li><a class="dd-option">
                                         <input class="dd-option-value" type="hidden" value="4">
                                          <?= Html::img('@web/images/address.png',['class'=>'dd-option-image']);?>
-                                        <label class="dd-option-text">777</label></a></li>
+                                        <label class="dd-option-text">Default wallet</label></a></li>
                                 <li><a onclick="Wallet_create.init()" class="dd-create">
                                         <?= Html::img('@web/images/icons/ic_addplus.svg',['class'=>'dd-option-image']);?>
                                         <label class="dd-option-text">Create Wallet</label></a></li>
                             </ul>
+                            <p class="error-text">
+                                Insufficient wallet balance
+                            </p>
                         </div>
 
                         <script>
@@ -63,8 +66,12 @@ $this->title = 'Wallet';
                     </div>
                     <div class="form-group">
                         <label class="control-label">To:</label>
-                        <p class="form-copy-text" onclick="copyText(this);" data-original-title="" title="">
-                            GA6HCMBLTZS5VYYBCATRBRZ3BZJMAFUDKYYF6AH6MVCMGWMRDNSWJPIH</p>
+                        <p class="form-copy-text has-error" onclick="copyText(this);" data-original-title="" title="">
+                            <?= Html::img('@web/images/address.png',['class'=>'img-copy']);?> GA6HCMBLTZS5VYYBCATRBRZ3BZJMAFUDKYYF6AH6MVCMGWMRDNSWJPIH
+                        </p>
+                        <p class="error-text">
+                            Wrong  wallet address
+                        </p>
                     </div>
                     <div class="form-group like-group">
                         <label class="control-label"><span>Balance</span></label>
